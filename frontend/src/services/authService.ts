@@ -14,7 +14,7 @@ export async function signup(
   password: string
 ): Promise<AuthResponse> {
   const response = await axios.post<AuthResponse>(
-    `${API_URL}/signup`,
+    `${API_URL}/auth/signup`,
     { name, email, password }
   );
 
@@ -27,7 +27,7 @@ export async function login(
   password: string
 ): Promise<AuthResponse> {
   const response = await axios.post<AuthResponse>(
-    `${API_URL}/login`,
+    `${API_URL}/auth/login`,
     { email, password }
   );
 
