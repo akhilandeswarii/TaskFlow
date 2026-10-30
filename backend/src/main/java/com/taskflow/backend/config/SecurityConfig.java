@@ -35,7 +35,11 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of("http://localhost:5173"));
+        config.setAllowedOrigins(List.of(
+    "http://localhost:5173",
+    "https://task-flow-phi-blush.vercel.app",
+    "https://task-flow-git-main-akhilandeswari.vercel.app"
+));
         config.setAllowedMethods(
             List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")
         );
